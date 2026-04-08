@@ -1,0 +1,214 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope Mountain Ltd | Building Your Future</title>
+    <style>
+        /* --- General Styles --- */
+        :root {
+            --primary-blue: #1a2a6c;
+            --accent-orange: #f27121;
+            --light-gray: #f4f4f4;
+            --white: #ffffff;
+            --dark-text: #333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body { line-height: 1.6; color: var(--dark-text); }
+
+        /* --- Navigation --- */
+        nav {
+            background: var(--primary-blue);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav .nav-links a:hover { color: var(--accent-orange); }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(26, 42, 108, 0.7), rgba(26, 42, 108, 0.7)), 
+                        url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1500&q=80'); /* Construction background placeholder */
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin-bottom: 20px; }
+        .cta-btn {
+            background: var(--accent-orange);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .cta-btn:hover { background: #e06010; transform: scale(1.05); }
+
+        /* --- Products Section --- */
+        .section { padding: 60px 5%; }
+        .section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; color: var(--primary-blue); }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .product-card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); transform: translateY(-5px); }
+        .product-card h3 { margin-bottom: 15px; color: var(--primary-blue); }
+        
+        .btn-group { display: flex; gap: 10px; justify-content: center; margin-top: 15px; }
+        .btn-small { padding: 8px 15px; border-radius: 4px; text-decoration: none; font-size: 0.9rem; border: none; cursor: pointer; }
+        .btn-price { background: #eee; color: #333; }
+        .btn-order { background: var(--primary-blue); color: white; }
+
+        /* --- Contact Form --- */
+        .contact-container { max-width: 600px; margin: 0 auto; }
+        .contact-form input, .contact-form textarea {
+            width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;
+        }
+        .submit-btn {
+            width: 100%; background: var(--accent-orange); color: white; border: none; padding: 15px; font-weight: bold; cursor: pointer;
+        }
+
+        /* --- Footer --- */
+        footer { background: #111; color: #ccc; padding: 40px 5%; text-align: center; }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav { flex-direction: column; }
+            .nav-links { margin-top: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Hope Mountain</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <h1>Hope Mountain Ltd</h1>
+        <p>Where the customer is king. We provide high-quality cement, iron sheets, and building materials to make your dream house a reality.</p>
+        <a href="#products" class="cta-btn">View Inventory</a>
+    </header>
+
+    <section class="section" id="products">
+        <h2 class="section-title">Our Building Materials</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <h3>High-Grade Cement</h3>
+                <p>Strong bonding for foundations and walls.</p>
+                <div class="btn-group">
+                    <button class="btn-small btn-price">Check Price</button>
+                    <button class="btn-small btn-order">Order Now</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <h3>Iron Sheets</h3>
+                <p>Durable, rust-resistant roofing solutions.</p>
+                <div class="btn-group">
+                    <button class="btn-small btn-price">Check Price</button>
+                    <button class="btn-small btn-order">Order Now</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <h3>Quality Bricks</h3>
+                <p>Fired clay and concrete blocks available.</p>
+                <div class="btn-group">
+                    <button class="btn-small btn-price">Check Price</button>
+                    <button class="btn-small btn-order">Order Now</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <h3>Sand & Stones</h3>
+                <p>Clean river sand and crushed aggregate.</p>
+                <div class="btn-group">
+                    <button class="btn-small btn-price">Check Price</button>
+                    <button class="btn-small btn-order">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about" style="background: var(--light-gray);">
+        <h2 class="section-title">About Us</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+            Based in <strong>Kigali, Rwanda</strong>, Hope Mountain Ltd is a trusted leader in the supply of construction materials. We understand that building a home is a lifetime investment, which is why we only source materials that meet international safety and durability standards.
+        </p>
+    </section>
+
+    <section class="section" id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-container">
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Phone Number" required>
+                <textarea rows="5" placeholder="What materials do you need?"></textarea>
+                <button type="submit" class="submit-btn">Send Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hope Mountain Ltd. Kigali, Rwanda.</p>
+        <p>Email: info@hopemountain.rw | Phone: +250 7XX XXX XXX</p>
+    </footer>
+
+</body>
+</html>
